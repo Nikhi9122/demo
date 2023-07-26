@@ -1,0 +1,36 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            function App() {
+  var [ar,setAr]= useState(['dog', 'cat', 'pig', 'mouse', 'tiger', 'lion'])
+  //console.log(ar)
+  function add(){
+    var s=document.getElementById('myval').value;
+    setAr([...ar,s])
+    console.log(ar)
+  }
+  console.log(ar)
+  function del(i){
+    ar.splice(i,1)
+    setAr([...ar])
+  }
+  return (
+    <div >
+      
+       <input type ='text' id='myval' />
+       <button onClick={add}>Add</button>
+       <ul>
+          {
+          ar.map((e,i)=>
+            <li key={i}>{e} <span onClick={()=>{del(i)}} style={{border:'1px solid'}}>Delete</span></li>
+          )
+        }
+       </ul>
+    </div>
+  );
+}
+
+        </script>
+    </body>
+</html>
