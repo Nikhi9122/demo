@@ -1,9 +1,11 @@
 
-.mybox{
-      border-radius: 50px;
-      padding: 10px;
-      color: rgba(7, 6, 6, 0.473);
-      text-align: center;
-      
 
+
+.mybox{
+      border: 100px;
+      margin: 10px;
+      padding: 10px;
+      color: red;
+      text-align: center;
 }
+

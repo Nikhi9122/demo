@@ -8,11 +8,13 @@ function App() {
   <div>
     
     <h1>App component</h1>
-    <Outlet></Outlet>
+    
     <ul>
     
-      <li><Link to='/about'>Aboutus</Link></li>
-      <li><Link to='/contact'>Contactus</Link></li>
+       <Link to='/products'>Products</Link>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <Link to='/countries'>Countries</Link>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <Link to='/todolist'>Todolist</Link>
+      <Outlet></Outlet>
     </ul>
 
   </div>

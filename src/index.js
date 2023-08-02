@@ -8,29 +8,30 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Contact from './Contact';
 import Service from './Service';
-import About from './About';
-
-
+import About  from  './About';
+import Products from './Products';
 import { element } from 'prop-types';
-
+import Countries from './Countries';
+import Todolist from './Todolist';
 var router=createBrowserRouter([
 
     {
         path:"/",
         element:<App></App>,
         children:[
+          
             {
-                path:"/contact",
-                element:<Contact></Contact>
+                path:'/products',
+                element:<Products></Products>
             },
             {
-                path:"/service",
-                element:<Service></Service>
+                path:'/countries',
+                element:<Countries></Countries>
             },
             {
-                path:"/about",
-                element:<About></About>
-            },
+                path:'/todolist',
+                element:<Todolist></Todolist>
+            }
           
           
         ]
