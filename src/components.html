@@ -1,36 +1,40 @@
 <html>
-    <head></head>
-    <body>
-        <script>
-            function App() {
-  var [ar,setAr]= useState(['dog', 'cat', 'pig', 'mouse', 'tiger', 'lion'])
-  //console.log(ar)
-  function add(){
-    var s=document.getElementById('myval').value;
-    setAr([...ar,s])
-    console.log(ar)
-  }
-  console.log(ar)
-  function del(i){
-    ar.splice(i,1)
-    setAr([...ar])
-  }
-  return (
-    <div >
-      
-       <input type ='text' id='myval' />
-       <button onClick={add}>Add</button>
-       <ul>
-          {
-          ar.map((e,i)=>
-            <li key={i}>{e} <span onClick={()=>{del(i)}} style={{border:'1px solid'}}>Delete</span></li>
-          )
-        }
-       </ul>
-    </div>
-  );
-}
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            class Mycomponent extends React.Component{
+                    constructor(){
+                        super();
+                        this.state={
+                            count:0
+                        }
+                    }  
+                    increment=()=>{
+                        this.setState({count:this.state.count+1})
+
+                    }
+                    decrement=()=>{
+                        this.setState({count:this.state.count-1})
+                    }
+          
+        render(){
+            return(
+                <div>
+                    <h1>My component</h1>
+                    <h1>{this.state.count}</h1>
+                    <button onClick={this.increment}>increment</button>
+                    <button onClick={this.decrement}>decrement</button>
+                    </div>                                                                                                                         
+            )
+        }
+    }   
+        ReactDOM.render(<Mycomponent></Mycomponent>,document.getElementById('d1'))
         </script>
     </body>
 </html>
