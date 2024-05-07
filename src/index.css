@@ -1,0 +1,10 @@
+.myredbox{
+   
+    text-align: center;
+    display: inline-block;
+    width: 150px;
+}
+.img{
+    width: 100px;
+    height: 100px;
+}
